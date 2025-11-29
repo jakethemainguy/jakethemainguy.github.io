@@ -1,95 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Convex Runner</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title> Jake|Convex Runner</title>
+<link rel="icon" type="image/png" href="64x64favicon.png">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: url('bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;   /* ← centers vertically & horizontally */
+        min-height: 100vh;
+    }
 
-        body {
-            background: url("bg.jpg") no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    /* DARK OVERLAY */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65); /* ← stronger contrast */
+        backdrop-filter: blur(8px);
+        z-index: 0;
+    }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.55);
-            backdrop-filter: blur(3px);
-            padding: 40px 60px;
-            border-radius: 12px;
-            text-align: center;
-            max-width: 420px;
-            width: 90%;
-        }
+    /* CARD */
+    .card {
+        position: relative;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 35px;
+        border-radius: 15px;
+        width: 420px;
+        text-align: center;
+        color: white;
+        backdrop-filter: blur(12px);
+        animation: fadeIn 0.8s ease-out; /* nice fade */
+    }
 
-        h1 {
-            font-size: 34px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 20px;
-        }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
-        p {
-            color: #dcdcdc;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
+    .button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        font-size: 18px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
 
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            margin: 10px 0;
-            font-size: 17px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.2s ease;
-        }
+    .play-btn {
+        background: #4cc6ff;
+        color: black;
+    }
 
-        .play-btn {
-            background: #4ac7ff;
-            color: #000;
-        }
+    .play-btn:hover {
+        background: #35b5f0;
+    }
 
-        .play-btn:hover {
-            background: #79d7ff;
-        }
+    .learn-btn {
+        background: white;
+        color: black;
+    }
 
-        .learn-btn {
-            background: #ffffff;
-            color: #111;
-        }
-
-        .learn-btn:hover {
-            background: #f1f1f1;
-        }
-    </style>
+    .learn-btn:hover {
+        background: #e5e5e5;
+    }
+</style>
 </head>
 
 <body>
-    <div class="overlay">
-        <h1>Convex Runner</h1>
-        <p>A fast, fun, skill-based browser game powered by Convex Finance.</p>
 
-        <a class="btn play-btn" href="https://jakethemainguy.github.io/Convex-Runner-Game/">
-            ▶ Play Game
-        </a>
+<div class="overlay"></div>
 
-        <a class="btn learn-btn" href="https://www.convexfinance.com" target="_blank">
-            Learn About Convex Finance
-        </a>
-    </div>
+<div class="card">
+    <h1>Convex Runner</h1>
+    <p>Grab as many CVX tokens as you sprint through the amazing world of Convex Town.</p>
+
+    <button class="button play-btn"
+        onclick="window.location.href='https://jakethemainguy.github.io/Convex-Runner-Game/'">
+        ► Play Game
+    </button>
+
+    <button class="button learn-btn"
+        onclick="window.location.href='https://convexfinance.com'">
+        Learn About Convex Finance
+    </button>
+</div>
+
 </body>
 </html>
