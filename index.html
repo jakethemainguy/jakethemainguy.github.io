@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convex Runner</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: url("bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(3px);
+            padding: 40px 60px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 420px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #dcdcdc;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            font-size: 17px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+
+        .play-btn {
+            background: #4ac7ff;
+            color: #000;
+        }
+
+        .play-btn:hover {
+            background: #79d7ff;
+        }
+
+        .learn-btn {
+            background: #ffffff;
+            color: #111;
+        }
+
+        .learn-btn:hover {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <h1>Convex Runner</h1>
+        <p>A fast, fun, skill-based browser game powered by Convex Finance.</p>
+
+        <a class="btn play-btn" href="https://jakethemainguy.github.io/Convex-Runner-Game/">
+            ▶ Play Game
+        </a>
+
+        <a class="btn learn-btn" href="https://www.convexfinance.com" target="_blank">
+            Learn About Convex Finance
+        </a>
+    </div>
+</body>
+</html>
